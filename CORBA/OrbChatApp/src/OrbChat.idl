@@ -1,0 +1,12 @@
+module OrbChat {
+    interface ChatClientInt {
+        void tell(in string name);
+        string getName();
+    };
+
+    interface ChatServerInt {
+        boolean login(in ChatClientInt a);
+        void publish(in string s);
+        attribute string getConnected;
+    };
+};
